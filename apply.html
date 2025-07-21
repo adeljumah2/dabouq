@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Our Team – DABOUQ Group</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="dabouq.jpg" alt="DABOUQ Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="speciality.html">Speciality</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="apply.html" class="active">Careers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="careers-section container">
+    <h1>Join Our Team</h1>
+    <p>Fill out the form below to apply for a position at DABOUQ Group.</p>
+
+    <form action="https://formsubmit.co/your-email@example.com" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Cover Letter / Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <label for="cv">CV Link (Google Drive, Dropbox, etc.)</label>
+      <input type="url" id="cv" name="cv" placeholder="Paste the link to your CV here" required />
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 DABOUQ Group — All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

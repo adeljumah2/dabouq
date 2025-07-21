@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – DABOUQ Group</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="dabouq.jpg" alt="DABOUQ Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="speciality.html">Speciality</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="apply.html">Careers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you. Please fill out the form below or use the information provided to reach us directly.</p>
+
+      <div class="cards" style="justify-content: space-between; flex-wrap: wrap;">
+        <div class="card" style="flex: 1 1 350px;">
+          <form action="https://formsubmit.co/info@dabouq.com.sa" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+            <input type="tel" name="phone" placeholder="Phone Number (optional)" />
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="card" style="flex: 1 1 300px;">
+          <p><strong>📞 Phone:</strong> <a href="tel:920015680">920015680</a></p>
+          <p><strong>✉️ Email:</strong> <a href="mailto:info@dabouq.com.sa">info@dabouq.com.sa</a></p>
+          <p><strong>📍 Address:</strong><br/> Tabuk, Saudi Arabia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 DABOUQ Group — All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
