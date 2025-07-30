@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DABOUQ Group</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/dabouq.jpg" alt="DABOUQ Logo"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="speciality.html">Speciality</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="apply.html">Careers</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-hero fade-in">
+        <h1>About DABOUQ Group</h1>
+        <p>
+            DABOUQ Group is a diversified company operating across multiple sectors, including digital solutions, automotive services, and food distribution.
+            With a strong commitment to innovation, quality, and excellence, we strive to create impactful solutions that serve businesses, communities, and individuals across the region.
+        </p>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="mission-vision fade-in">
+        <div class="card">
+            <h3><i class="fas fa-rocket"></i> Our Mission</h3>
+            <p>To deliver tailored, innovative solutions that drive growth, efficiency, and sustainability across diverse industries.</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-bullseye"></i> Our Vision</h3>
+            <p>To be a trusted regional leader recognized for excellence, innovation, and meaningful contributions to the markets we serve.</p>
+        </div>
+    </section>
+
+    <!-- CORE VALUES -->
+    <section class="core-values fade-in">
+        <h2><i class="fas fa-star"></i> Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value">
+                <h3><i class="fas fa-lightbulb"></i> Innovation</h3>
+                <p>We embrace new ideas and technologies to create impactful solutions.</p>
+            </div>
+            <div class="value">
+                <h3><i class="fas fa-award"></i> Quality</h3>
+                <p>We maintain the highest standards in everything we do.</p>
+            </div>
+            <div class="value">
+                <h3><i class="fas fa-handshake"></i> Integrity</h3>
+                <p>We conduct our business with honesty, transparency, and responsibility.</p>
+            </div>
+            <div class="value">
+                <h3><i class="fas fa-users"></i> Customer Focus</h3>
+                <p>We prioritize building long-term partnerships based on trust and value.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 DABOUQ Group — All Rights Reserved</p>
+    </footer>
+
+    <!-- SCRIPT for Fade-in Animation -->
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.2 };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => { appearOnScroll.observe(fader); });
+    </script>
+
+</body>
+</html>
