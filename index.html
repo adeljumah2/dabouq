@@ -1,72 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DABOUQ Group</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DABOUQ Group</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">
-      <img src="dabouq.jpg" alt="DABOUQ Logo" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="speciality.html">Speciality</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="apply.html">Careers</a></li>
-      </ul>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/dabouq.jpg" alt="DABOUQ Logo"></a>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="speciality.html">Speciality</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="apply.html">Careers</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Welcome to DABOUQ Group</h1>
-      <p>Driven by Innovation</p>
-      <a href="about.html" class="btn">Learn More</a>
-    </div>
-  </section>
+    <!-- HERO SECTION -->
+    <header class="hero fade-in">
+        <h1>Welcome to DABOUQ Group</h1>
+        <p>Driven by Innovation</p>
+    </header>
 
-  <!-- Speciality Section -->
-  <section class="speciality-section">
-    <div class="container">
-      <h2>Our Speciality</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Adaptiv</h3>
-          <p><strong>Digital & Lean Manufacturing</strong><br />
-            Adaptiv delivers tailored Lean Production, Industry 4.0, and pipe-racking systems—optimizing your processes to be efficient, flexible, and secure.
-          </p>
-          <a href="https://theadaptiv.com" target="_blank">Visit Adaptiv</a>
+    <!-- WHO WE ARE -->
+    <section class="who-we-are fade-in">
+        <h2>Who We Are</h2>
+        <p>At DABOUQ Group, we are committed to driving innovation across industries, offering cutting-edge solutions in automotive, technology, and food sectors.</p>
+        <a href="about.html" class="btn">Read More</a>
+    </section>
+
+    <!-- COUNTER SECTION -->
+    <section class="stats fade-in">
+        <div>
+            <h3 class="counter" data-target="10">0</h3>
+            <p>Years of Experience</p>
         </div>
-
-        <div class="card">
-          <h3>DABOUQ Auto</h3>
-          <p><strong>Smart Vehicle Solutions</strong><br />
-            DABOUQ Auto offers cutting-edge automotive services and smart fleet technologies to enhance transport efficiency.
-          </p>
-          <a href="#">Coming soon</a>
+        <div>
+            <h3 class="counter" data-target="5">0</h3>
+            <p>Business Divisions</p>
         </div>
-
-        <div class="card">
-          <h3>DABOUQ Food</h3>
-          <p><strong>High-Quality Food Products</strong><br />
-            DABOUQ Food distributes premium food products with strict quality and safety standards.
-          </p>
-          <a href="#">Coming soon</a>
+        <div>
+            <h3 class="counter" data-target="100">0</h3>
+            <p>Partners & Clients</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <p>© 2025 DABOUQ Group — All Rights Reserved</p>
-  </footer>
+    <!-- OUR SPECIALITY -->
+    <section class="container fade-in">
+        <h2>Our Speciality</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Adaptiv</h3>
+                <p><strong>Digital & Lean Manufacturing</strong></p>
+                <p>Tailored Lean Production, Industry 4.0, and pipe-racking systems for efficiency and security.</p>
+                <a href="https://theadaptiv.com/contact" target="_blank" class="btn">
+                    Visit Website 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M6 3.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V4.707l-8.146 8.147a.5.5 0 0 1-.708-.708L11.293 4H6.5a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="card">
+                <h3>DABOUQ Auto</h3>
+                <p><strong>Smart Vehicle Solutions</strong></p>
+                <p>Cutting-edge automotive services and smart fleet technologies.</p>
+                <a href="https://dabouq.com.sa/" target="_blank" class="btn">
+                    Visit Website 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M6 3.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V4.707l-8.146 8.147a.5.5 0 0 1-.708-.708L11.293 4H6.5a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="card">
+                <h3>DABOUQ Food</h3>
+                <p><strong>High-Quality Food Products</strong></p>
+                <p>Premium food distribution with strict safety standards.</p>
+                <a href="#" class="btn disabled">Coming Soon</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- OUR PARTNERS -->
+    <section class="partners-section fade-in">
+        <h2>Our Partners</h2>
+        <div class="partners-grid">
+            <div class="partner"><img src="images/agile.jpg" alt="Agile Consulting"></div>
+            <div class="partner"><img src="images/gs.jpg" alt="G.S.ACE"></div>
+            <div class="partner"><img src="images/mot.gate.jpg" alt="Motors Gate"></div>
+            <div class="partner"><img src="images/sev.jpg" alt="Sevens"></div>
+            <div class="partner"><img src="images/wheel.me.png" alt="Wheel.me"></div>
+            <div class="partner"><img src="images/beewatec.jpg" alt="Beewatec"></div>
+            <div class="partner"><img src="images/fath.jpg" alt="FATH"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 DABOUQ Group — All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
