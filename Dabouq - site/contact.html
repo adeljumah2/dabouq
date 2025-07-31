@@ -29,7 +29,7 @@
             <!-- Contact Form -->
             <div style="flex:1; min-width:300px;">
                 <h2>Get in Touch</h2>
-                <form action="https://formspree.io/f/mwpqbqwv" method="POST">
+                <form action="https://formspree.io/f/mwpqbqwv" method="POST" onsubmit="redirectToThankYou(event)">
                     <input type="text" name="name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="text" name="phone" placeholder="Phone Number">
@@ -67,5 +67,11 @@
         <p>© 2025 DABOUQ Group — All Rights Reserved</p>
     </footer>
 
+    <script>
+        function redirectToThankYou(event) {
+            event.preventDefault(); 
+            window.location.href = "thankyou.html";
+        }
+    </script>
 </body>
 </html>
