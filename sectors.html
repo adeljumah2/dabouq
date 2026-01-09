@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sectors | Dabouq Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        dabouq: { dark: '#020617', card: '#0f172a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in { animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-dabouq-dark text-white font-sans antialiased selection:bg-blue-500/30">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-dabouq-dark/80 backdrop-blur-md border-b border-white/5 px-8 py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center relative z-50">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter text-white">
+                DABOUQ<span class="text-blue-500">.GROUP</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white transition">Home</a>
+                <a href="sectors.html" class="text-sm font-bold text-white border-b-2 border-blue-500 pb-1 transition">Sectors</a>
+                <a href="careers.html" class="text-sm font-medium text-slate-300 hover:text-white transition">Careers</a>
+                <a href="contact.html" class="bg-blue-600 text-white px-5 py-2 rounded-full text-xs font-bold shadow-lg shadow-blue-500/20 hover:bg-blue-700 transition">GET IN TOUCH</a>
+            </div>
+            <div class="md:hidden">
+                <button class="mobile-menu-button text-white focus:outline-none p-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="mobile-menu hidden fixed inset-0 w-screen h-screen bg-black z-[999] flex flex-col justify-center items-center transition-all duration-300">
+            <div class="flex flex-col items-center gap-10 text-center">
+                <a href="index.html" class="text-4xl font-bold text-white hover:text-blue-500 transition tracking-tight">Home</a>
+                <a href="sectors.html" class="text-4xl font-bold text-white hover:text-blue-500 transition tracking-tight">Sectors</a>
+                <a href="careers.html" class="text-4xl font-bold text-white hover:text-blue-500 transition tracking-tight">Careers</a>
+                <a href="contact.html" class="text-4xl font-bold text-white hover:text-blue-500 transition tracking-tight">Contact</a>
+            </div>
+            <button class="mobile-close-button mt-16 text-sm text-slate-400 tracking-[0.3em] uppercase hover:text-white transition border border-white/20 px-8 py-3 rounded-full hover:bg-white/10">CLOSE</button>
+        </div>
+    </nav>
+
+    <section class="pt-40 max-w-7xl mx-auto px-8 pb-12 fade-in">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">Our <span class="text-blue-500">Sectors.</span></h1>
+        <p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
+            Driving innovation across three key pillars of the economy. We build sustainable value through focused vertical integration.
+        </p>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-8 pb-20 space-y-24">
+
+        <div id="engineering" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-in scroll-mt-32">
+            <div class="order-2 md:order-1">
+                <div class="flex items-center gap-3 text-blue-400 mb-4">
+                    <span class="h-px w-8 bg-blue-400"></span>
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase">Infrastructure</span>
+                </div>
+                <h2 class="text-4xl font-bold mb-4">ADAPTIV Engineering</h2>
+                <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                    Specializing in advanced industrial infrastructure, pipe racking systems, and smart building solutions. ADAPTIV delivers turnkey engineering projects.
+                </p>
+                <ul class="space-y-3 text-slate-300 mb-8">
+                    <li class="flex items-center gap-3"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Industrial Storage Solutions</li>
+                    <li class="flex items-center gap-3"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Smart Grids & Automation</li>
+                </ul>
+                
+                <div class="flex gap-4">
+                    <a href="https://theadaptiv.com" target="_blank" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition text-sm font-bold shadow-lg shadow-blue-900/20">
+                        Visit Website
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 relative group">
+                <div class="absolute inset-0 bg-blue-500/10 rounded-3xl transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+                <img src="assets/Adaptive-wearehouse.png" class="relative rounded-3xl w-full object-cover h-[400px] grayscale group-hover:grayscale-0 transition-all duration-700" alt="Adaptiv Pipe Racking Infrastructure">
+            </div>
+        </div>
+
+        <div id="automotive" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-in scroll-mt-32">
+            <div class="relative group">
+                <div class="absolute inset-0 bg-blue-500/10 rounded-3xl transform -translate-x-4 translate-y-4 group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+                <img src="assets/Dabouq Cars.png" class="relative rounded-3xl w-full object-cover h-[400px] grayscale group-hover:grayscale-0 transition-all duration-700" alt="Dabouq Cars">
+            </div>
+            <div>
+                <div class="flex items-center gap-3 text-blue-400 mb-4">
+                    <span class="h-px w-8 bg-blue-400"></span>
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase">Mobility</span>
+                </div>
+                <h2 class="text-4xl font-bold mb-4">Dabouq Automotive</h2>
+                <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                    Redefining luxury mobility. Exclusive distributors for premium automotive brands in the region.
+                </p>
+                <ul class="space-y-3 text-slate-300 mb-8">
+                    <li class="flex items-center gap-3"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Luxury Fleet</li>
+                    <li class="flex items-center gap-3"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> EV Infrastructure</li>
+                </ul>
+                
+                <div class="flex gap-4">
+                    <button disabled class="flex items-center gap-2 bg-slate-800/50 text-slate-400 border border-white/10 px-6 py-3 rounded-full cursor-not-allowed text-sm font-bold">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Website Coming Soon
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="fmcg" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-in scroll-mt-32">
+            <div class="order-2 md:order-1">
+                <div class="flex items-center gap-3 text-emerald-400 mb-4">
+                    <span class="h-px w-8 bg-emerald-400"></span>
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase">Nutrition</span>
+                </div>
+                <h2 class="text-4xl font-bold mb-4">Dabouq FMCG</h2>
+                <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                    Ensuring food security and quality distribution across the market with a vast supply chain.
+                </p>
+                <ul class="space-y-3 text-slate-300 mb-8">
+                    <li class="flex items-center gap-3"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> Global Network</li>
+                    <li class="flex items-center gap-3"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> Cold Chain</li>
+                </ul>
+                
+                <div class="flex gap-4">
+                    <button disabled class="flex items-center gap-2 bg-slate-800/50 text-slate-400 border border-white/10 px-6 py-3 rounded-full cursor-not-allowed text-sm font-bold">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Website Coming Soon
+                    </button>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 relative group">
+                <div class="absolute inset-0 bg-emerald-500/10 rounded-3xl transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+                <img src="assets/Dabouq food.png" class="relative rounded-3xl w-full object-cover h-[400px] grayscale group-hover:grayscale-0 transition-all duration-700" alt="FMCG">
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="border-t border-white/10 bg-black/20 mt-12">
+        <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center">
+            
+            <div class="flex gap-8 mb-6">
+                <a href="https://www.linkedin.com/company/dabouq-trading-company/posts/?feedView=all" target="_blank" class="text-slate-500 hover:text-[#0077b5] text-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                
+                <a href="https://www.instagram.com/dabouq_/" target="_blank" class="text-slate-500 hover:text-[#e4405f] text-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61569034414032" target="_blank" class="text-slate-500 hover:text-[#1877f2] text-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+
+            <p class="text-slate-600 text-sm font-medium">
+                &copy; 2026 Dabouq Group. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menu = document.querySelector(".mobile-menu");
+            const openBtn = document.querySelector("button.mobile-menu-button");
+            const closeBtn = document.querySelector("button.mobile-close-button");
+
+            function toggleMenu() {
+                menu.classList.toggle("hidden");
+            }
+
+            if (openBtn) openBtn.addEventListener("click", toggleMenu);
+            if (closeBtn) closeBtn.addEventListener("click", toggleMenu);
+        });
+    </script>
+</body>
+</html>

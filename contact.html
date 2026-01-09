@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Dabouq Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        dabouq: { dark: '#020617', card: '#0f172a' }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in { animation: fadeIn 1s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+       
+        input:focus ~ label, input:not(:placeholder-shown) ~ label, 
+        textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label,
+        select:focus ~ label, select:valid ~ label {
+            top: -0.8rem;
+            font-size: 0.875rem;
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-dabouq-dark text-white font-sans antialiased overflow-x-hidden selection:bg-blue-500/30">
+
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-dabouq-dark/80 backdrop-blur-md border-b border-white/5 px-8 py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center relative z-50">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter text-white">
+                DABOUQ<span class="text-blue-500">.GROUP</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white transition">Home</a>
+                <a href="sectors.html" class="text-sm font-medium text-slate-300 hover:text-white transition">Sectors</a>
+                <a href="careers.html" class="text-sm font-medium text-slate-300 hover:text-white transition">Careers</a>
+                <a href="contact.html" class="bg-blue-600 text-white px-5 py-2 rounded-full text-xs font-bold shadow-lg shadow-blue-500/20 hover:bg-blue-700 transition">GET IN TOUCH</a>
+            </div>
+            <div class="md:hidden">
+                <button class="mobile-menu-button text-white focus:outline-none p-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="mobile-menu hidden fixed inset-0 w-screen h-screen bg-black z-[999] flex flex-col justify-center items-center transition-all duration-300">
+            <div class="flex flex-col items-center gap-10 text-center">
+                <a href="index.html" class="text-4xl font-bold text-white hover:text-blue-500 transition tracking-tight">Home</a>
+                <a href="sectors.html" class="text-4xl font-bold text-white hover:text-blue-500 transition tracking-tight">Sectors</a>
+                <a href="careers.html" class="text-4xl font-bold text-white hover:text-blue-500 transition tracking-tight">Careers</a>
+                <a href="contact.html" class="text-4xl font-bold text-white hover:text-blue-500 transition tracking-tight">Contact</a>
+            </div>
+            <button class="mobile-close-button mt-16 text-sm text-slate-400 tracking-[0.3em] uppercase hover:text-white transition border border-white/20 px-8 py-3 rounded-full hover:bg-white/10">CLOSE</button>
+        </div>
+    </nav>
+
+    <div class="relative z-10 min-h-screen flex flex-col justify-center pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-6 w-full">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                
+                <div class="lg:col-span-5 pt-10 fade-in">
+                    <span class="text-blue-500 font-bold tracking-widest text-xs uppercase mb-4 block">Contact Us</span>
+                    <h1 class="text-6xl md:text-8xl font-bold mb-8 leading-tight tracking-tight">
+                        Let's <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Create.</span>
+                    </h1>
+                    <p class="text-slate-400 text-xl leading-relaxed mb-12 max-w-md">
+                        Have a visionary project? We are looking for partners who want to build the future of industry and mobility.
+                    </p>
+
+                    <div class="space-y-6 text-slate-300">
+                        <div class="flex items-center gap-4 group cursor-pointer">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition duration-300">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span class="group-hover:text-white transition">info@dabouq.com.sa</span>
+                        </div>
+                        <div class="flex items-center gap-4 group cursor-pointer">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition duration-300">
+                                <i class="fas fa-map-pin"></i>
+                            </div>
+                            <span class="group-hover:text-white transition">Riyadh, Saudi Arabia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 fade-in" style="animation-delay: 0.2s;">
+                    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+                        
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-32 -mt-32 transition duration-700 group-hover:bg-blue-500/20"></div>
+
+                        <form action="https://formspree.io/f/xvgbnqzy" method="POST" class="relative z-10 space-y-10">
+                            
+                            <input type="hidden" name="_next" value="thank-you-contact.html">
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <div class="relative">
+                                    <input type="text" name="name" id="name" required class="w-full py-2 text-xl text-white bg-transparent border-b-2 border-white/20 focus:border-blue-500 outline-none transition-all placeholder-transparent peer" placeholder="Name">
+                                    <label for="name" class="absolute left-0 -top-3.5 text-slate-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-500 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-blue-500 peer-focus:text-sm">Full Name</label>
+                                </div>
+                                <div class="relative">
+                                    <input type="email" name="email" id="email" required class="w-full py-2 text-xl text-white bg-transparent border-b-2 border-white/20 focus:border-blue-500 outline-none transition-all placeholder-transparent peer" placeholder="Email">
+                                    <label for="email" class="absolute left-0 -top-3.5 text-slate-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-500 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-blue-500 peer-focus:text-sm">Email Address</label>
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                <select name="subject" id="subject" class="w-full py-2 text-xl text-white bg-transparent border-b-2 border-white/20 focus:border-blue-500 outline-none transition-all peer appearance-none cursor-pointer">
+                                    <option class="bg-slate-900 text-slate-400" value="" disabled selected></option>
+                                    <option class="bg-slate-900" value="Partnership">Partnership Proposal</option>
+                                    <option class="bg-slate-900" value="Investment">Investment Inquiry</option>
+                                    <option class="bg-slate-900" value="General">General Information</option>
+                                </select>
+                                <label for="subject" class="absolute left-0 -top-3.5 text-slate-500 text-sm transition-all peer-focus:text-blue-500 peer-focus:text-sm">Subject</label>
+                                <div class="absolute right-0 top-3 text-slate-500 pointer-events-none">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                <textarea name="message" id="message" rows="3" required class="w-full py-2 text-xl text-white bg-transparent border-b-2 border-white/20 focus:border-blue-500 outline-none transition-all placeholder-transparent peer" placeholder="Message"></textarea>
+                                <label for="message" class="absolute left-0 -top-3.5 text-slate-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-500 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-blue-500 peer-focus:text-sm">Tell us about your project</label>
+                            </div>
+
+                            <div class="pt-4 flex justify-end">
+                                <button type="submit" class="group relative px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-white/10">
+                                    <span class="relative z-10 group-hover:text-white transition-colors duration-300">SEND MESSAGE</span>
+                                    <div class="absolute inset-0 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></div>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-white/10 bg-black/20 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col items-center">
+            <div class="flex gap-8 mb-4">
+                <a href="https://www.linkedin.com/company/dabouq-trading-company/posts/?feedView=all" target="_blank" class="text-slate-500 hover:text-[#0077b5] text-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/dabouq_/" target="_blank" class="text-slate-500 hover:text-[#e4405f] text-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61569034414032" target="_blank" class="text-slate-500 hover:text-[#1877f2] text-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            <p class="text-slate-600 text-sm font-medium tracking-wide">
+                &copy; 2026 Dabouq Group. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menu = document.querySelector(".mobile-menu");
+            const openBtn = document.querySelector("button.mobile-menu-button");
+            const closeBtn = document.querySelector("button.mobile-close-button");
+
+            function toggleMenu() {
+                menu.classList.toggle("hidden");
+            }
+
+            if (openBtn) openBtn.addEventListener("click", toggleMenu);
+            if (closeBtn) closeBtn.addEventListener("click", toggleMenu);
+        });
+    </script>
+</body>
+</html>
