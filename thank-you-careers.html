@@ -5,28 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Submitted | Dabouq Group</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: { dabouq: { dark: '#020617' } },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                        'success-pop': 'pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' }
-                        },
-                        pop: {
-                            '0%': { opacity: 0, transform: 'scale(0.5)' },
-                            '100%': { opacity: 1, transform: 'scale(1)' }
+                    colors: {
+                        dabouq: {
+                            dark: '#020617',
+                            accent: '#3b82f6'
                         }
                     }
                 }
@@ -34,29 +22,57 @@
         }
     </script>
 </head>
-<body class="bg-dabouq-dark text-white font-sans antialiased flex flex-col justify-center items-center min-h-screen selection:bg-blue-500/30 overflow-hidden">
+<body class="bg-dabouq-dark text-white h-screen flex flex-col overflow-hidden relative selection:bg-blue-500/30">
 
-    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-10 animate-blob"></div>
-    </div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 to-purple-900/10 pointer-events-none"></div>
 
-    <div class="relative z-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] p-12 text-center max-w-lg w-full shadow-2xl animate-success-pop mx-4">
-        
-        <div class="w-24 h-24 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
-            <i class="fas fa-file-circle-check text-4xl text-blue-500"></i>
-        </div>
-
-        <h1 class="text-3xl font-bold mb-4">Application Submitted</h1>
-        <p class="text-slate-400 text-lg mb-10 leading-relaxed">
-            Your profile is now in our system. <br>
-            Our <span class="text-white font-bold">HR Team</span> will review your qualifications and contact you if there is a match.
-        </p>
-
-        <a href="index.html" class="group inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:scale-105 hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/20">
-            <i class="fas fa-home group-hover:-translate-y-0.5 transition-transform"></i>
-            Back to Website
+    <nav class="absolute top-0 w-full p-8 flex justify-between items-center z-10 opacity-50">
+        <a href="index.html" class="text-xl font-bold tracking-tighter text-white">
+            DABOUQ<span class="text-blue-500">.GROUP</span>
         </a>
-    </div>
+    </nav>
 
+    <main class="flex-grow flex items-center justify-center p-4 relative z-10">
+        <div class="max-w-2xl w-full text-center">
+            
+            <div class="relative inline-flex items-center justify-center mb-8 group">
+                <div class="absolute inset-0 bg-blue-500/20 rounded-full blur-xl group-hover:bg-blue-500/30 transition-all duration-700"></div>
+                <div class="relative w-20 h-20 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center">
+                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+                Application <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Submitted.</span>
+            </h1>
+            
+            <p class="text-slate-400 text-lg mb-8 max-w-lg mx-auto leading-relaxed">
+                Thank you for your interest in joining Dabouq Group. Our Talent Acquisition team will review your profile shortly.
+            </p>
+
+            <p class="text-slate-500 text-sm mb-8 animate-pulse">
+                Redirecting to Home in 5 seconds...
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="index.html" class="px-8 py-3 rounded-full bg-white text-dabouq-dark font-bold hover:bg-slate-200 transition duration-300 w-full sm:w-auto">
+                    Return Immediately
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="absolute bottom-6 w-full text-center text-slate-600 text-xs tracking-widest uppercase">
+        &copy; 2026 Dabouq Group
+    </footer>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 15000); 
+    </script>
 </body>
 </html>
