@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Dabouq Group</title>
+    <meta name="description" content="Join Dabouq Group and shape the industrial landscape of the region. Submit your application today.">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body>
+
+    <div class="preloader" id="preloader">
+        <img src="assets/logo.png" alt="Dabouq Group" class="preloader-logo">
+        <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <header class="site-header scrolled" id="header">
+        <nav class="nav-container">
+            <a href="index.html"><img src="assets/logo.png" alt="Dabouq Group" class="logo-img logo-dark"><img src="assets/logo-white.png" alt="" class="logo-img logo-light" aria-hidden="true"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="careers.html" class="active">Careers</a></li>
+                <li><a href="contact.html" class="btn-nav btn-nav-desktop">Get in Touch</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Open menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="sectors.html">Sectors</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <button class="mobile-close">Close</button>
+    </div>
+
+    <section class="form-page">
+        <div class="container" style="max-width: 720px;">
+            <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+                <div class="section-label">Join the Team</div>
+                <h1 style="font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem;">Build Your Legacy.</h1>
+                <p style="color: var(--grey); font-size: 1.05rem; max-width: 480px; margin: 0 auto;">We don't offer jobs. We offer the opportunity to shape the industrial landscape of the region.</p>
+            </div>
+
+            <div class="form-card reveal">
+                <form action="https://formspree.io/f/xvgbnqzy" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_next" value="thank-you-careers.html">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Mobile Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+966 5X XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="department">Target Department</label>
+                            <select id="department" name="department" required>
+                                <option value="" disabled selected>Select department</option>
+                                <option value="Engineering">Engineering (Adaptiv)</option>
+                                <option value="Sales">Sales & Marketing</option>
+                                <option value="Finance">Finance & Investment</option>
+                                <option value="Operations">Operations & Logistics</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn URL</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/...">
+                    </div>
+                    <div class="form-group">
+                        <label>Upload CV</label>
+                        <label class="upload-zone">
+                            <div id="upload-content" class="upload-content">
+                                <div><i class="fas fa-cloud-upload-alt"></i></div>
+                                <p>Click to upload your CV</p>
+                                <span>PDF or DOCX (Max 5MB)</span>
+                            </div>
+                            <div id="upload-success" class="upload-success">
+                                <div><i class="fas fa-check-circle" style="color: var(--navy); font-size: 1.5rem;"></i></div>
+                                <p id="file-name" style="color: var(--navy); font-weight: 600; margin-top: 0.5rem;"></p>
+                                <span>Ready to submit</span>
+                            </div>
+                            <input type="file" name="attachment" id="cv-upload" hidden accept=".pdf,.doc,.docx">
+                        </label>
+                    </div>
+                    <button type="submit" class="form-submit">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-cta reveal">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-text">
+                    <h2>Explore our ecosystem.</h2>
+                    <p>Discover the sectors where you can build your career.</p>
+                </div>
+                <a href="sectors.html" class="btn-primary">View Sectors</a>
+            </div>
+        </div>
+        <div class="footer-map" aria-label="Regional presence map">
+            <div id="regional-map"></div>
+            <div class="footer-map-fade" aria-hidden="true"></div>
+        </div>
+        <div class="container footer-body">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo-white.png" alt="Dabouq Group" class="footer-logo">
+                    <p>A premier investment holding company with regional operations across the Middle East.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="sectors.html">Sectors</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sectors</h4>
+                    <ul>
+                        <li><a href="sectors.html#engineering">ADAPTIV Engineering</a></li>
+                        <li><a href="sectors.html#automotive">Automotive</a></li>
+                        <li><a href="sectors.html#fmcg">FMCG</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@dabouq.com.sa">info@dabouq.com.sa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dabouq Group. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/dabouq-trading-company/posts/?feedView=all" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/dabouq_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61569034414032" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="js/map.js"></script>
+</body>
+</html>

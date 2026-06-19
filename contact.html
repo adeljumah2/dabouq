@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Dabouq Group</title>
+    <meta name="description" content="Get in touch with Dabouq Group for partnership proposals, investment inquiries, and general information.">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body>
+
+    <div class="preloader" id="preloader">
+        <img src="assets/logo.png" alt="Dabouq Group" class="preloader-logo">
+        <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <header class="site-header scrolled" id="header">
+        <nav class="nav-container">
+            <a href="index.html"><img src="assets/logo.png" alt="Dabouq Group" class="logo-img logo-dark"><img src="assets/logo-white.png" alt="" class="logo-img logo-light" aria-hidden="true"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html" class="btn-nav btn-nav-desktop active">Get in Touch</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Open menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="sectors.html">Sectors</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <button class="mobile-close">Close</button>
+    </div>
+
+    <section class="form-page">
+        <div class="container form-layout">
+            <div class="form-info reveal">
+                <div class="section-label">Contact Us</div>
+                <h1>Let's Create Together.</h1>
+                <p>Have a visionary project? We are looking for partners who want to build the future of industry and mobility.</p>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <a href="mailto:info@dabouq.com.sa">info@dabouq.com.sa</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <span>Riyadh, Saudi Arabia </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card reveal">
+                <form action="https://formspree.io/f/xvgbnqzy" method="POST">
+                    <input type="hidden" name="_next" value="thank-you-contact.html">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Mobile Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+966 5X XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="Partnership">Partnership Proposal</option>
+                                <option value="Investment">Investment Inquiry</option>
+                                <option value="General">General Information</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-cta reveal">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-text">
+                    <h2>Join our team.</h2>
+                    <p>Explore career opportunities across our regional operations.</p>
+                </div>
+                <a href="careers.html" class="btn-primary">View Careers</a>
+            </div>
+        </div>
+        <div class="footer-map" aria-label="Regional presence map">
+            <div id="regional-map"></div>
+            <div class="footer-map-fade" aria-hidden="true"></div>
+        </div>
+        <div class="container footer-body">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo-white.png" alt="Dabouq Group" class="footer-logo">
+                    <p>A premier investment holding company with regional operations across the Middle East.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="sectors.html">Sectors</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sectors</h4>
+                    <ul>
+                        <li><a href="sectors.html#engineering">ADAPTIV Engineering</a></li>
+                        <li><a href="sectors.html#automotive">Automotive</a></li>
+                        <li><a href="sectors.html#fmcg">FMCG</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@dabouq.com.sa">info@dabouq.com.sa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dabouq Group. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/dabouq-trading-company/posts/?feedView=all" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/dabouq_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61569034414032" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
