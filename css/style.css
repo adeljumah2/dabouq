@@ -343,21 +343,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--white);
 }
 
-.lang-switch-mobile {
-  margin: 1.5rem auto 0;
-  border-color: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.lang-switch-mobile .lang-btn {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.lang-switch-mobile .lang-btn.active {
-  background: var(--white);
-  color: var(--navy);
-}
-
 html[dir="rtl"] .hero-actions .btn-primary svg,
 html[dir="rtl"] .link-arrow svg,
 html[dir="rtl"] .btn-primary svg {
@@ -1886,10 +1871,16 @@ html[dir="rtl"] .hero-title .outline {
 }
 
 @media (max-width: 768px) {
-  .nav-links, .btn-nav-desktop, .lang-switch-desktop { display: none !important; }
+  .nav-links, .btn-nav-desktop { display: none !important; }
   .menu-toggle { display: flex; }
   .nav-container {
     grid-template-columns: 1fr auto;
+  }
+  .nav-actions {
+    gap: 0.55rem;
+  }
+  .lang-switch {
+    transform: scale(0.95);
   }
 
   .hero-cinematic .container { padding-bottom: 5rem; padding-top: 8rem; }

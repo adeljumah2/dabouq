@@ -30,7 +30,7 @@
             </ul>
             <div class="nav-actions">
                 <a href="/contact/" class="btn-nav btn-nav-desktop" data-i18n="nav.cta">Get in Touch</a>
-                <div class="lang-switch lang-switch-desktop" role="group" aria-label="Language">
+                <div class="lang-switch" role="group" aria-label="Language">
                     <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
                     <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
                 </div>
@@ -47,10 +47,6 @@
         <a href="/sectors/" data-i18n="nav.sectors">Sectors</a>
         <a href="/careers/" data-i18n="nav.careers">Careers</a>
         <a href="/contact/" data-i18n="nav.contact">Contact</a>
-        <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
-            <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
-            <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
-        </div>
         <button class="mobile-close" data-i18n="nav.close">Close</button>
     </div>
 
@@ -81,19 +77,31 @@
                             <input type="tel" id="phone" name="phone" required placeholder="+966 5X XXX XXXX">
                         </div>
                         <div class="form-group">
+                            <label for="sector" data-i18n="careers.sector">Target Sector</label>
+                            <select id="sector" name="sector" required>
+                                <option value="" disabled selected data-i18n="careers.sector.select">Select sector</option>
+                                <option value="ADAPTIV Engineering" data-i18n="careers.sector1">ADAPTIV Engineering</option>
+                                <option value="Automotive" data-i18n="careers.sector2">Automotive</option>
+                                <option value="FMCG" data-i18n="careers.sector3">FMCG</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
                             <label for="department" data-i18n="careers.dept">Target Department</label>
                             <select id="department" name="department" required>
                                 <option value="" disabled selected data-i18n="careers.dept.select">Select department</option>
+                                <option value="Sales Supervisor" data-i18n="careers.dept5">Sales Supervisor</option>
                                 <option value="Engineering" data-i18n="careers.dept1">Engineering (Adaptiv)</option>
                                 <option value="Sales" data-i18n="careers.dept2">Sales & Marketing</option>
                                 <option value="Finance" data-i18n="careers.dept3">Finance & Investment</option>
                                 <option value="Operations" data-i18n="careers.dept4">Operations & Logistics</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="linkedin" data-i18n="careers.linkedin">LinkedIn URL</label>
-                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/...">
+                        <div class="form-group">
+                            <label for="linkedin" data-i18n="careers.linkedin">LinkedIn URL</label>
+                            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/...">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label data-i18n="careers.cv">Upload CV</label>
