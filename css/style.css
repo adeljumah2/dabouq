@@ -527,8 +527,8 @@ html[dir="rtl"] .stat-item:last-child {
 .hero-title {
   font-size: clamp(3.5rem, 9vw, 8rem);
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: var(--white);
   margin-bottom: 2rem;
 }
@@ -536,20 +536,37 @@ html[dir="rtl"] .stat-item:last-child {
 .hero-title .line {
   display: block;
   overflow: hidden;
+  padding-block: 0.08em 0.18em;
 }
 
 .hero-title .line span {
   display: inline-block;
-  transform: translateY(110%);
+  transform: translateY(115%);
   animation: heroLineUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  padding-inline: 0.02em;
 }
 
 .hero-title .line:nth-child(1) span { animation-delay: 0.5s; }
 .hero-title .line:nth-child(2) span { animation-delay: 0.65s; }
 
 .hero-title .outline {
-  -webkit-text-stroke: 1.5px rgba(255,255,255,0.4);
+  -webkit-text-stroke: 1.5px rgba(255,255,255,0.45);
   color: transparent;
+  paint-order: stroke fill;
+}
+
+html[dir="rtl"] .hero-title {
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .hero-title .line {
+  padding-block: 0.14em 0.22em;
+}
+
+html[dir="rtl"] .hero-title .outline {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.08);
 }
 
 @keyframes heroLineUp {
