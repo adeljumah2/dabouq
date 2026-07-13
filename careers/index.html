@@ -77,15 +77,21 @@
                             <input type="tel" id="phone" name="phone" required placeholder="+966 5X XXX XXXX">
                         </div>
                         <div class="form-group">
-                            <label for="nationality" data-i18n="careers.nationality">Nationality</label>
-                            <input type="text" id="nationality" name="nationality" required data-i18n-placeholder="careers.nationality.ph" placeholder="e.g. Saudi, Jordanian, Egyptian">
+                            <label for="city" data-i18n="careers.city">City</label>
+                            <input type="text" id="city" name="city" required data-i18n-placeholder="careers.city.ph" placeholder="e.g. Riyadh, Jeddah, Dammam">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
+                            <label for="nationality" data-i18n="careers.nationality">Nationality</label>
+                            <input type="text" id="nationality" name="nationality" required data-i18n-placeholder="careers.nationality.ph" placeholder="e.g. Saudi, Jordanian, Egyptian">
+                        </div>
+                        <div class="form-group">
                             <label for="iqama_profession" data-i18n="careers.iqama">Profession on Iqama</label>
                             <input type="text" id="iqama_profession" name="iqama_profession" required data-i18n-placeholder="careers.iqama.ph" placeholder="As written on residence permit">
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group">
                             <label for="sector" data-i18n="careers.sector">Target Sector</label>
                             <select id="sector" name="sector" required>
@@ -95,8 +101,6 @@
                                 <option value="FMCG" data-i18n="careers.sector3">FMCG</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group">
                             <label for="department" data-i18n="careers.dept">Target Department</label>
                             <select id="department" name="department" required>
@@ -109,10 +113,10 @@
                                 <option value="Operations" data-i18n="careers.dept4">Operations & Logistics</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="linkedin" data-i18n="careers.linkedin">LinkedIn URL</label>
-                            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/...">
-                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin" data-i18n="careers.linkedin">LinkedIn URL</label>
+                        <input type="url" id="linkedin" name="linkedin" required placeholder="https://linkedin.com/in/...">
                     </div>
                     <div class="form-group">
                         <label data-i18n="careers.cv">Upload CV</label>
@@ -127,7 +131,7 @@
                                 <p id="file-name" style="color: var(--navy); font-weight: 600; margin-top: 0.5rem;"></p>
                                 <span data-i18n="careers.cv.ready">Ready to submit</span>
                             </div>
-                            <input type="file" name="attachment" id="cv-upload" hidden accept=".pdf,.doc,.docx">
+                            <input type="file" name="attachment" id="cv-upload" hidden accept=".pdf,.doc,.docx" required>
                         </label>
                     </div>
                     <button type="submit" class="form-submit" data-i18n="careers.submit">Submit Application</button>
@@ -192,7 +196,7 @@
         </div>
     </footer>
 
-    <script src="/js/i18n.js?v=20260714b"></script>
+    <script src="/js/i18n.js?v=20260714c"></script>
     <script src="/js/main.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="/js/map.js"></script>
