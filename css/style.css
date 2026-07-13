@@ -1,4 +1,52 @@
 /* ─── Dabouq Group — Design System v2 ─── */
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/assets/fonts/thmanyahsans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/assets/fonts/thmanyahsans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/assets/fonts/thmanyahsans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/assets/fonts/thmanyahsans-Medium.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/assets/fonts/thmanyahsans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
+  src: url('/assets/fonts/thmanyahsans-Black.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --navy: #1a2b4a;
   --navy-dark: #0f1c33;
@@ -15,7 +63,7 @@
   --radius: 16px;
   --radius-lg: 24px;
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font: 'Thmanyah Sans', system-ui, sans-serif;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -126,6 +174,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: var(--transition);
 }
 
+.site-header:not(.scrolled) {
+  background: linear-gradient(to bottom, rgba(15, 28, 51, 0.72) 0%, rgba(15, 28, 51, 0.45) 70%, transparent 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .site-header.scrolled {
   top: 0;
   background: rgba(255, 255, 255, 0.92);
@@ -174,7 +228,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .site-header:not(.scrolled) .nav-links a:not(.btn-nav) {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--white);
+  font-weight: 600;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 .site-header:not(.scrolled) .nav-links a:not(.btn-nav):hover,
@@ -184,20 +240,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .site-header:not(.scrolled) .nav-links a:not(.btn-nav)::after {
   background: var(--white);
+  height: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 .site-header:not(.scrolled) .btn-nav {
   background: var(--white);
   color: var(--navy) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .site-header:not(.scrolled) .btn-nav:hover {
-  background: var(--grey-light);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  background: var(--grey-bg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
 }
 
 .site-header:not(.scrolled) .menu-toggle {
   color: var(--white);
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.35));
+}
+
+.site-header:not(.scrolled) .logo-light {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
 }
 
 .nav-links a:not(.btn-nav)::after {
@@ -233,6 +297,96 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .btn-nav::after { display: none !important; }
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+
+.site-header:not(.scrolled) .lang-switch {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(15, 28, 51, 0.45);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.lang-btn {
+  min-width: 36px;
+  height: 32px;
+  padding: 0 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--grey);
+  transition: all var(--transition);
+}
+
+.site-header:not(.scrolled) .lang-btn {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.lang-btn.active {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.site-header:not(.scrolled) .lang-btn.active {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.lang-switch-mobile {
+  margin: 1.5rem auto 0;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lang-switch-mobile .lang-btn {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lang-switch-mobile .lang-btn.active {
+  background: var(--white);
+  color: var(--navy);
+}
+
+html[dir="rtl"] .hero-actions .btn-primary svg,
+html[dir="rtl"] .link-arrow svg,
+html[dir="rtl"] .btn-primary svg {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .sector-detail-grid.reverse .sector-detail-text {
+  order: 2;
+}
+
+html[dir="rtl"] .sector-detail-grid.reverse .sector-detail-img {
+  order: 1;
+}
+
+html[dir="rtl"] .about-card-watermark {
+  right: auto;
+  left: 1rem;
+}
+
+html[dir="rtl"] .about-card--featured .about-card-watermark {
+  right: auto;
+  left: 0.5rem;
+}
+
+html[dir="rtl"] .stat-item {
+  border-right: none;
+  border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+html[dir="rtl"] .stat-item:last-child {
+  border-left: none;
+}
 
 .menu-toggle {
   display: none;
@@ -1707,7 +1861,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 @media (max-width: 768px) {
-  .nav-links, .btn-nav-desktop { display: none !important; }
+  .nav-links, .btn-nav-desktop, .lang-switch-desktop { display: none !important; }
   .menu-toggle { display: flex; }
 
   .hero-cinematic .container { padding-bottom: 5rem; padding-top: 8rem; }
@@ -1718,7 +1872,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .eco-card:last-child { grid-column: span 1; aspect-ratio: 3/4; }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .stat-item { border-right: none; border-left: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
 
   .footer-grid { grid-template-columns: 1fr; }

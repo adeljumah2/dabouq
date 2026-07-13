@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Received | Dabouq Group</title>
     <link rel="icon" href="/assets/logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <script>(function(){var l=localStorage.getItem('dabouq-lang')||'en';document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';if(l==='ar')document.documentElement.classList.add('lang-ar');})();</script>
 </head>
 <body>
 
     <header class="site-header scrolled" id="header" style="position: absolute;">
         <nav class="nav-container">
             <a href="/"><img src="/assets/logo.png" alt="Dabouq Group" class="logo-img logo-dark"><img src="/assets/logo-white.png" alt="" class="logo-img logo-light" aria-hidden="true"></a>
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+            </div>
         </nav>
     </header>
 
@@ -24,22 +26,23 @@
             <div class="thankyou-icon">
                 <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
             </div>
-            <h1>Message Received.</h1>
-            <p>Your inquiry has been securely transmitted. Our strategic team will review it and respond shortly.</p>
-            <a href="/" class="btn-primary" style="width: 100%; justify-content: center;">Return Home</a>
+            <h1 data-i18n="thanks.contact.title">Message Received.</h1>
+            <p data-i18n="thanks.contact.desc">Your inquiry has been securely transmitted. Our strategic team will review it and respond shortly.</p>
+            <a href="/" class="btn-primary" style="width: 100%; justify-content: center;" data-i18n="thanks.home">Return Home</a>
             <div class="progress-bar"><div class="progress-fill"></div></div>
-            <p class="redirect-text">Redirecting automatically</p>
+            <p class="redirect-text" data-i18n="thanks.redirect">Redirecting automatically</p>
         </div>
     </div>
 
     <footer class="site-footer site-footer--compact">
-        <div class="footer-map" aria-label="Regional presence map">
+        <div class="footer-map" data-i18n-aria="footer.map" aria-label="Regional presence map">
             <div id="regional-map"></div>
             <div class="footer-map-fade" aria-hidden="true"></div>
         </div>
     </footer>
 
     <script>setTimeout(() => { window.location.href = '/'; }, 5000);</script>
+    <script src="/js/i18n.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="/js/map.js"></script>
 </body>

@@ -6,12 +6,10 @@
     <title>Contact | Dabouq Group</title>
     <meta name="description" content="Get in touch with Dabouq Group for partnership proposals, investment inquiries, and general information.">
     <link rel="icon" href="/assets/logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <script>(function(){var l=localStorage.getItem('dabouq-lang')||'en';document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';if(l==='ar')document.documentElement.classList.add('lang-ar');})();</script>
 </head>
 <body>
 
@@ -25,33 +23,43 @@
         <nav class="nav-container">
             <a href="/"><img src="/assets/logo.png" alt="Dabouq Group" class="logo-img logo-dark"><img src="/assets/logo-white.png" alt="" class="logo-img logo-light" aria-hidden="true"></a>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/#about">About</a></li>
-                <li><a href="/sectors/">Sectors</a></li>
-                <li><a href="/careers/">Careers</a></li>
-                <li><a href="/contact/" class="btn-nav btn-nav-desktop active">Get in Touch</a></li>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/#about" data-i18n="nav.about">About</a></li>
+                <li><a href="/sectors/" data-i18n="nav.sectors">Sectors</a></li>
+                <li><a href="/careers/" data-i18n="nav.careers">Careers</a></li>
+                <li><a href="/contact/" class="btn-nav btn-nav-desktop active" data-i18n="nav.cta">Get in Touch</a></li>
+                <li class="lang-switch-desktop">
+                    <div class="lang-switch" role="group" aria-label="Language">
+                        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                        <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+                    </div>
+                </li>
             </ul>
-            <button class="menu-toggle" aria-label="Open menu">
+            <button class="menu-toggle" data-i18n-aria="nav.menu" aria-label="Open menu">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </nav>
     </header>
 
     <div class="mobile-menu">
-        <a href="/">Home</a>
-        <a href="/#about">About</a>
-        <a href="/sectors/">Sectors</a>
-        <a href="/careers/">Careers</a>
-        <a href="/contact/">Contact</a>
-        <button class="mobile-close">Close</button>
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/#about" data-i18n="nav.about">About</a>
+        <a href="/sectors/" data-i18n="nav.sectors">Sectors</a>
+        <a href="/careers/" data-i18n="nav.careers">Careers</a>
+        <a href="/contact/" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+        </div>
+        <button class="mobile-close" data-i18n="nav.close">Close</button>
     </div>
 
     <section class="form-page">
         <div class="container form-layout">
             <div class="form-info reveal">
-                <div class="section-label">Contact Us</div>
-                <h1>Let's Create Together.</h1>
-                <p>Have a visionary project? We are looking for partners who want to build the future of industry and mobility.</p>
+                <div class="section-label" data-i18n="contact.label">Contact Us</div>
+                <h1 data-i18n="contact.title">Let's Create Together.</h1>
+                <p data-i18n="contact.desc">Have a visionary project? We are looking for partners who want to build the future of industry and mobility.</p>
                 <div class="contact-items">
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
@@ -59,7 +67,7 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <span>Riyadh, Saudi Arabia </span>
+                        <span data-i18n="contact.location">Riyadh, Saudi Arabia</span>
                     </div>
                 </div>
             </div>
@@ -69,34 +77,34 @@
                     <input type="hidden" name="_next" value="https://dabouq.com.sa/thank-you-contact/">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
+                            <label for="name" data-i18n="contact.name">Full Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
+                            <label for="email" data-i18n="contact.email">Email Address</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="phone">Mobile Number</label>
+                            <label for="phone" data-i18n="contact.phone">Mobile Number</label>
                             <input type="tel" id="phone" name="phone" required placeholder="+966 5X XXX XXXX">
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
+                            <label for="subject" data-i18n="contact.subject">Subject</label>
                             <select id="subject" name="subject" required>
-                                <option value="" disabled selected>Select a topic</option>
-                                <option value="Partnership">Partnership Proposal</option>
-                                <option value="Investment">Investment Inquiry</option>
-                                <option value="General">General Information</option>
+                                <option value="" disabled selected data-i18n="contact.topic">Select a topic</option>
+                                <option value="Partnership" data-i18n="contact.opt1">Partnership Proposal</option>
+                                <option value="Investment" data-i18n="contact.opt2">Investment Inquiry</option>
+                                <option value="General" data-i18n="contact.opt3">General Information</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+                        <label for="message" data-i18n="contact.message">Message</label>
+                        <textarea id="message" name="message" required data-i18n-placeholder="contact.placeholder" placeholder="Tell us about your project..."></textarea>
                     </div>
-                    <button type="submit" class="form-submit">Send Message</button>
+                    <button type="submit" class="form-submit" data-i18n="contact.submit">Send Message</button>
                 </form>
             </div>
         </div>
@@ -106,13 +114,13 @@
         <div class="footer-cta reveal">
             <div class="container footer-cta-inner">
                 <div class="footer-cta-text">
-                    <h2>Join our team.</h2>
-                    <p>Explore career opportunities across our regional operations.</p>
+                    <h2 data-i18n="contact.cta.title">Join our team.</h2>
+                    <p data-i18n="contact.cta.desc">Explore career opportunities across our regional operations.</p>
                 </div>
-                <a href="/careers/" class="btn-primary">View Careers</a>
+                <a href="/careers/" class="btn-primary" data-i18n="contact.cta.btn">View Careers</a>
             </div>
         </div>
-        <div class="footer-map" aria-label="Regional presence map">
+        <div class="footer-map" data-i18n-aria="footer.map" aria-label="Regional presence map">
             <div id="regional-map"></div>
             <div class="footer-map-fade" aria-hidden="true"></div>
         </div>
@@ -120,35 +128,35 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="/assets/logo-white.png" alt="Dabouq Group" class="footer-logo">
-                    <p>A premier investment holding company with regional operations across the Middle East.</p>
+                    <p data-i18n="footer.brand">A premier investment holding company with regional operations across the Middle East.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
+                    <h4 data-i18n="footer.nav">Navigation</h4>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/#about">About</a></li>
-                        <li><a href="/sectors/">Sectors</a></li>
-                        <li><a href="/careers/">Careers</a></li>
-                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/" data-i18n="nav.home">Home</a></li>
+                        <li><a href="/#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="/sectors/" data-i18n="nav.sectors">Sectors</a></li>
+                        <li><a href="/careers/" data-i18n="nav.careers">Careers</a></li>
+                        <li><a href="/contact/" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Sectors</h4>
+                    <h4 data-i18n="footer.sectors">Sectors</h4>
                     <ul>
-                        <li><a href="/sectors/#engineering">ADAPTIV Engineering</a></li>
-                        <li><a href="/sectors/#automotive">Automotive</a></li>
-                        <li><a href="/sectors/#fmcg">FMCG</a></li>
+                        <li><a href="/sectors/#engineering" data-i18n="footer.sector1">ADAPTIV Engineering</a></li>
+                        <li><a href="/sectors/#automotive" data-i18n="footer.sector2">Automotive</a></li>
+                        <li><a href="/sectors/#fmcg" data-i18n="footer.sector3">FMCG</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.contact">Contact</h4>
                     <ul>
                         <li><a href="mailto:info@dabouq.com.sa">info@dabouq.com.sa</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Dabouq Group. All Rights Reserved.</p>
+                <p data-i18n="footer.copy">&copy; 2026 Dabouq Group. All Rights Reserved.</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/company/dabouq-trading-company/posts/?feedView=all" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.instagram.com/dabouq_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -158,6 +166,7 @@
         </div>
     </footer>
 
+    <script src="/js/i18n.js"></script>
     <script src="/js/main.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="/js/map.js"></script>

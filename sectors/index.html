@@ -6,12 +6,10 @@
     <title>Sectors | Dabouq Group</title>
     <meta name="description" content="Explore Dabouq Group's three strategic sectors: ADAPTIV Engineering, Automotive, and FMCG distribution.">
     <link rel="icon" href="/assets/logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <script>(function(){var l=localStorage.getItem('dabouq-lang')||'en';document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';if(l==='ar')document.documentElement.classList.add('lang-ar');})();</script>
 </head>
 <body>
 
@@ -25,32 +23,42 @@
         <nav class="nav-container">
             <a href="/"><img src="/assets/logo.png" alt="Dabouq Group" class="logo-img logo-dark"><img src="/assets/logo-white.png" alt="" class="logo-img logo-light" aria-hidden="true"></a>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/#about">About</a></li>
-                <li><a href="/sectors/" class="active">Sectors</a></li>
-                <li><a href="/careers/">Careers</a></li>
-                <li><a href="/contact/" class="btn-nav btn-nav-desktop">Get in Touch</a></li>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
+                <li><a href="/#about" data-i18n="nav.about">About</a></li>
+                <li><a href="/sectors/" class="active" data-i18n="nav.sectors">Sectors</a></li>
+                <li><a href="/careers/" data-i18n="nav.careers">Careers</a></li>
+                <li><a href="/contact/" class="btn-nav btn-nav-desktop" data-i18n="nav.cta">Get in Touch</a></li>
+                <li class="lang-switch-desktop">
+                    <div class="lang-switch" role="group" aria-label="Language">
+                        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                        <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+                    </div>
+                </li>
             </ul>
-            <button class="menu-toggle" aria-label="Open menu">
+            <button class="menu-toggle" data-i18n-aria="nav.menu" aria-label="Open menu">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </nav>
     </header>
 
     <div class="mobile-menu">
-        <a href="/">Home</a>
-        <a href="/#about">About</a>
-        <a href="/sectors/">Sectors</a>
-        <a href="/careers/">Careers</a>
-        <a href="/contact/">Contact</a>
-        <button class="mobile-close">Close</button>
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/#about" data-i18n="nav.about">About</a>
+        <a href="/sectors/" data-i18n="nav.sectors">Sectors</a>
+        <a href="/careers/" data-i18n="nav.careers">Careers</a>
+        <a href="/contact/" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+        </div>
+        <button class="mobile-close" data-i18n="nav.close">Close</button>
     </div>
 
     <section class="page-hero" style="background: var(--navy-dark); border: none; padding-bottom: 5rem;">
         <div class="container reveal">
-            <div class="hero-eyebrow" style="animation: none; opacity: 1;">What We Do</div>
-            <h1 style="font-size: clamp(3rem, 7vw, 5.5rem); color: white; font-weight: 800; letter-spacing: -0.04em; line-height: 1;">Our <span style="color: var(--grey); font-weight: 300;">Sectors.</span></h1>
-            <p class="section-desc" style="color: var(--grey-light); margin-top: 1.5rem;">Driving innovation across three key pillars of the economy. We build sustainable value through focused vertical integration.</p>
+            <div class="hero-eyebrow" style="animation: none; opacity: 1;" data-i18n="sectors.eyebrow">What We Do</div>
+            <h1 style="font-size: clamp(3rem, 7vw, 5.5rem); color: white; font-weight: 800; letter-spacing: -0.04em; line-height: 1;" data-i18n="sectors.title" data-i18n-html="true">Our <span style="color: var(--grey); font-weight: 300;">Sectors.</span></h1>
+            <p class="section-desc" style="color: var(--grey-light); margin-top: 1.5rem;" data-i18n="sectors.desc">Driving innovation across three key pillars of the economy. We build sustainable value through focused vertical integration.</p>
         </div>
     </section>
 
@@ -58,16 +66,16 @@
         <div id="engineering" class="sector-detail scroll-mt-32">
             <div class="sector-detail-grid reveal">
                 <div class="sector-detail-text">
-                    <div class="sector-tag">Infrastructure</div>
-                    <h2>ADAPTIV Engineering</h2>
-                    <p>Specializing in advanced industrial infrastructure, pipe racking systems, and smart building solutions. ADAPTIV delivers turnkey engineering projects across the region.</p>
+                    <div class="sector-tag" data-i18n="sectors.eng.tag">Infrastructure</div>
+                    <h2 data-i18n="sectors.eng.title">ADAPTIV Engineering</h2>
+                    <p data-i18n="sectors.eng.desc">Specializing in advanced industrial infrastructure, pipe racking systems, and smart building solutions. ADAPTIV delivers turnkey engineering projects across the region.</p>
                     <ul class="feature-list">
-                        <li>Industrial Storage Solutions</li>
-                        <li>Smart Grids & Automation</li>
-                        <li>Turnkey Engineering Projects</li>
+                        <li data-i18n="sectors.eng.f1">Industrial Storage Solutions</li>
+                        <li data-i18n="sectors.eng.f2">Smart Grids & Automation</li>
+                        <li data-i18n="sectors.eng.f3">Turnkey Engineering Projects</li>
                     </ul>
                     <a href="https://theadaptiv.com" target="_blank" class="btn-primary">
-                        Visit Website
+                        <span data-i18n="sectors.visit">Visit Website</span>
                         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                     </a>
                 </div>
@@ -80,16 +88,16 @@
         <div id="automotive" class="sector-detail scroll-mt-32">
             <div class="sector-detail-grid reverse reveal">
                 <div class="sector-detail-text">
-                    <div class="sector-tag">Mobility</div>
-                    <h2>Dabouq Automotive</h2>
-                    <p>Redefining luxury mobility. Exclusive distributors for premium automotive brands in the region, setting new standards in the luxury automotive market.</p>
+                    <div class="sector-tag" data-i18n="sectors.auto.tag">Mobility</div>
+                    <h2 data-i18n="sectors.auto.title">Dabouq Automotive</h2>
+                    <p data-i18n="sectors.auto.desc">Redefining luxury mobility. Exclusive distributors for premium automotive brands in the region, setting new standards in the luxury automotive market.</p>
                     <ul class="feature-list">
-                        <li>Luxury Fleet Distribution</li>
-                        <li>EV Infrastructure</li>
-                        <li>Premium Brand Partnerships</li>
+                        <li data-i18n="sectors.auto.f1">Luxury Fleet Distribution</li>
+                        <li data-i18n="sectors.auto.f2">EV Infrastructure</li>
+                        <li data-i18n="sectors.auto.f3">Premium Brand Partnerships</li>
                     </ul>
                     <span class="btn-disabled">
-                        <i class="far fa-clock"></i> Website Coming Soon
+                        <i class="far fa-clock"></i> <span data-i18n="sectors.soon">Website Coming Soon</span>
                     </span>
                 </div>
                 <div class="sector-detail-img">
@@ -101,16 +109,16 @@
         <div id="fmcg" class="sector-detail scroll-mt-32">
             <div class="sector-detail-grid reveal">
                 <div class="sector-detail-text">
-                    <div class="sector-tag">Nutrition</div>
-                    <h2>Dabouq FMCG</h2>
-                    <p>Ensuring food security and quality distribution across the market with a vast supply chain network spanning multiple countries.</p>
+                    <div class="sector-tag" data-i18n="sectors.fmcg.tag">Nutrition</div>
+                    <h2 data-i18n="sectors.fmcg.title">Dabouq FMCG</h2>
+                    <p data-i18n="sectors.fmcg.desc">Ensuring food security and quality distribution across the market with a vast supply chain network spanning multiple countries.</p>
                     <ul class="feature-list">
-                        <li>Global Distribution Network</li>
-                        <li>Cold Chain Logistics</li>
-                        <li>Food Security Solutions</li>
+                        <li data-i18n="sectors.fmcg.f1">Global Distribution Network</li>
+                        <li data-i18n="sectors.fmcg.f2">Cold Chain Logistics</li>
+                        <li data-i18n="sectors.fmcg.f3">Food Security Solutions</li>
                     </ul>
                     <a href="https://food.dabouq.com.sa" target="_blank" class="btn-primary">
-                        Visit Website
+                        <span data-i18n="sectors.visit">Visit Website</span>
                         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                     </a>
                 </div>
@@ -125,13 +133,13 @@
         <div class="footer-cta reveal">
             <div class="container footer-cta-inner">
                 <div class="footer-cta-text">
-                    <h2>Interested in partnering?</h2>
-                    <p>Let's explore how our sectors can create value together.</p>
+                    <h2 data-i18n="sectors.cta.title">Interested in partnering?</h2>
+                    <p data-i18n="sectors.cta.desc">Let's explore how our sectors can create value together.</p>
                 </div>
-                <a href="/contact/" class="btn-primary">Get in Touch</a>
+                <a href="/contact/" class="btn-primary" data-i18n="sectors.cta.btn">Get in Touch</a>
             </div>
         </div>
-        <div class="footer-map" aria-label="Regional presence map">
+        <div class="footer-map" data-i18n-aria="footer.map" aria-label="Regional presence map">
             <div id="regional-map"></div>
             <div class="footer-map-fade" aria-hidden="true"></div>
         </div>
@@ -139,36 +147,36 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="/assets/logo-white.png" alt="Dabouq Group" class="footer-logo">
-                    <p>A premier investment holding company with regional operations across the Middle East.</p>
+                    <p data-i18n="footer.brand">A premier investment holding company with regional operations across the Middle East.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
+                    <h4 data-i18n="footer.nav">Navigation</h4>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/#about">About</a></li>
-                        <li><a href="/sectors/">Sectors</a></li>
-                        <li><a href="/careers/">Careers</a></li>
-                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/" data-i18n="nav.home">Home</a></li>
+                        <li><a href="/#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="/sectors/" data-i18n="nav.sectors">Sectors</a></li>
+                        <li><a href="/careers/" data-i18n="nav.careers">Careers</a></li>
+                        <li><a href="/contact/" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Sectors</h4>
+                    <h4 data-i18n="footer.sectors">Sectors</h4>
                     <ul>
-                        <li><a href="/sectors/#engineering">ADAPTIV Engineering</a></li>
-                        <li><a href="/sectors/#automotive">Automotive</a></li>
-                        <li><a href="/sectors/#fmcg">FMCG</a></li>
+                        <li><a href="/sectors/#engineering" data-i18n="footer.sector1">ADAPTIV Engineering</a></li>
+                        <li><a href="/sectors/#automotive" data-i18n="footer.sector2">Automotive</a></li>
+                        <li><a href="/sectors/#fmcg" data-i18n="footer.sector3">FMCG</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.contact">Contact</h4>
                     <ul>
                         <li><a href="mailto:info@dabouq.com.sa">info@dabouq.com.sa</a></li>
-                        <li><a href="#">Riyadh, Saudi Arabia</a></li>
+                        <li><a href="#" data-i18n="sectors.riyadh">Riyadh, Saudi Arabia</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Dabouq Group. All Rights Reserved.</p>
+                <p data-i18n="footer.copy">&copy; 2026 Dabouq Group. All Rights Reserved.</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/company/dabouq-trading-company/posts/?feedView=all" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.instagram.com/dabouq_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -178,6 +186,7 @@
         </div>
     </footer>
 
+    <script src="/js/i18n.js"></script>
     <script src="/js/main.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="/js/map.js"></script>

@@ -12,12 +12,10 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dabouq.com.sa">
     <link rel="icon" href="/assets/logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <script>(function(){var l=localStorage.getItem('dabouq-lang')||'en';document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';if(l==='ar')document.documentElement.classList.add('lang-ar');})();</script>
 </head>
 <body>
 
@@ -32,25 +30,35 @@
         <nav class="nav-container">
             <a href="/"><img src="/assets/logo.png" alt="Dabouq Group" class="logo-img logo-dark"><img src="/assets/logo-white.png" alt="" class="logo-img logo-light" aria-hidden="true"></a>
             <ul class="nav-links">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="/sectors/">Sectors</a></li>
-                <li><a href="/careers/">Careers</a></li>
-                <li><a href="/contact/" class="btn-nav btn-nav-desktop">Get in Touch</a></li>
+                <li><a href="/" class="active" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="/sectors/" data-i18n="nav.sectors">Sectors</a></li>
+                <li><a href="/careers/" data-i18n="nav.careers">Careers</a></li>
+                <li><a href="/contact/" class="btn-nav btn-nav-desktop" data-i18n="nav.cta">Get in Touch</a></li>
+                <li class="lang-switch-desktop">
+                    <div class="lang-switch" role="group" aria-label="Language">
+                        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                        <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+                    </div>
+                </li>
             </ul>
-            <button class="menu-toggle" aria-label="Open menu">
+            <button class="menu-toggle" data-i18n-aria="nav.menu" aria-label="Open menu">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </nav>
     </header>
 
     <div class="mobile-menu">
-        <a href="/">Home</a>
-        <a href="#about">About</a>
-        <a href="/sectors/">Sectors</a>
-        <a href="/careers/">Careers</a>
-        <a href="/contact/">Contact</a>
-        <button class="mobile-close">Close</button>
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="/sectors/" data-i18n="nav.sectors">Sectors</a>
+        <a href="/careers/" data-i18n="nav.careers">Careers</a>
+        <a href="/contact/" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switch lang-switch-mobile" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+        </div>
+        <button class="mobile-close" data-i18n="nav.close">Close</button>
     </div>
 
     <section class="hero-cinematic">
@@ -58,25 +66,25 @@
             <img src="/Adaptive-wearehouse.jpg" alt="">
         </div>
         <div class="container">
-            <div class="hero-eyebrow">Investment Holding Group</div>
+            <div class="hero-eyebrow" data-i18n="hero.eyebrow">Investment Holding Group</div>
             <h1 class="hero-title">
-                <span class="line"><span>Architecting</span></span>
-                <span class="line"><span class="outline">The Future.</span></span>
+                <span class="line"><span data-i18n="hero.title1">Architecting</span></span>
+                <span class="line"><span class="outline" data-i18n="hero.title2">The Future.</span></span>
             </h1>
             <div class="hero-bottom">
-                <p class="hero-desc">We don't just invest. We build an integrated ecosystem of Industry, Nutrition, and Mobility across Saudi Arabia and the region.</p>
+                <p class="hero-desc" data-i18n="hero.desc">We don't just invest. We build an integrated ecosystem of Industry, Nutrition, and Mobility across Saudi Arabia and the region.</p>
                 <div class="hero-actions">
                     <a href="/sectors/" class="btn-primary">
-                        Explore Ecosystem
+                        <span data-i18n="hero.explore">Explore Ecosystem</span>
                         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
-                    <a href="/contact/" class="btn-outline">Partner With Us</a>
+                    <a href="/contact/" class="btn-outline" data-i18n="hero.partner">Partner With Us</a>
                 </div>
             </div>
         </div>
         <div class="scroll-hint">
             <div class="mouse"></div>
-            Scroll
+            <span data-i18n="hero.scroll">Scroll</span>
         </div>
     </section>
 
@@ -84,19 +92,19 @@
         <div class="container stats-grid">
             <div class="stat-item reveal">
                 <div class="stat-number"><span class="counter" data-target="4">0</span>+</div>
-                <div class="stat-label">Countries</div>
+                <div class="stat-label" data-i18n="stats.countries">Countries</div>
             </div>
             <div class="stat-item reveal reveal-delay-1">
                 <div class="stat-number"><span class="counter" data-target="3">0</span>+</div>
-                <div class="stat-label">Major Sectors</div>
+                <div class="stat-label" data-i18n="stats.sectors">Major Sectors</div>
             </div>
             <div class="stat-item reveal reveal-delay-2">
                 <div class="stat-number"><span class="counter" data-target="10">0</span>+</div>
-                <div class="stat-label">Years Experience</div>
+                <div class="stat-label" data-i18n="stats.years">Years Experience</div>
             </div>
             <div class="stat-item reveal reveal-delay-3">
                 <div class="stat-number"><span class="counter" data-target="50" data-duration="2600">0</span>+</div>
-                <div class="stat-label">Employees</div>
+                <div class="stat-label" data-i18n="stats.employees">Employees</div>
             </div>
         </div>
     </section>
@@ -105,10 +113,10 @@
         <div class="container">
             <div class="ecosystem-header reveal">
                 <div>
-                    <div class="section-label">Our Ecosystem</div>
-                    <h2 class="section-title">Three Pillars.<br>One Vision.</h2>
+                    <div class="section-label" data-i18n="eco.label">Our Ecosystem</div>
+                    <h2 class="section-title" data-i18n="eco.title" data-i18n-html="true">Three Pillars.<br>One Vision.</h2>
                 </div>
-                <p class="section-desc">Driving innovation across the key pillars of the economy through focused vertical integration.</p>
+                <p class="section-desc" data-i18n="eco.desc">Driving innovation across the key pillars of the economy through focused vertical integration.</p>
             </div>
             <div class="ecosystem-grid">
                 <a href="/sectors/#engineering" class="eco-card reveal">
@@ -116,10 +124,10 @@
                     <div class="overlay"></div>
                     <div class="number">01</div>
                     <div class="content">
-                        <div class="tag">Engineering</div>
+                        <div class="tag" data-i18n="eco.tag1">Engineering</div>
                         <h3>ADAPTIV</h3>
-                        <p>Industrial Infrastructure Solutions</p>
-                        <span class="link-arrow">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        <p data-i18n="eco.p1">Industrial Infrastructure Solutions</p>
+                        <span class="link-arrow"><span data-i18n="eco.explore">Explore</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                     </div>
                 </a>
                 <a href="/sectors/#automotive" class="eco-card reveal reveal-delay-1">
@@ -127,10 +135,10 @@
                     <div class="overlay"></div>
                     <div class="number">02</div>
                     <div class="content">
-                        <div class="tag">Mobility</div>
-                        <h3>Automotive</h3>
-                        <p>Luxury Mobility</p>
-                        <span class="link-arrow">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        <div class="tag" data-i18n="eco.tag2">Mobility</div>
+                        <h3 data-i18n="eco.h2">Automotive</h3>
+                        <p data-i18n="eco.p2">Luxury Mobility</p>
+                        <span class="link-arrow"><span data-i18n="eco.explore">Explore</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                     </div>
                 </a>
                 <a href="/sectors/#fmcg" class="eco-card reveal reveal-delay-2">
@@ -138,10 +146,10 @@
                     <div class="overlay"></div>
                     <div class="number">03</div>
                     <div class="content">
-                        <div class="tag">Nutrition</div>
+                        <div class="tag" data-i18n="eco.tag3">Nutrition</div>
                         <h3>FMCG</h3>
-                        <p>Distribution & Food Security</p>
-                        <span class="link-arrow">Explore <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        <p data-i18n="eco.p3">Distribution & Food Security</p>
+                        <span class="link-arrow"><span data-i18n="eco.explore">Explore</span> <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                     </div>
                 </a>
             </div>
@@ -152,8 +160,8 @@
         <div class="partners-header reveal">
             <span class="partners-line"></span>
             <div class="partners-heading">
-                <p class="partners-label">Our Strategic Partners</p>
-                <p class="partners-sub">Trusted by industry leaders worldwide</p>
+                <p class="partners-label" data-i18n="partners.label">Our Strategic Partners</p>
+                <p class="partners-sub" data-i18n="partners.sub">Trusted by industry leaders worldwide</p>
             </div>
             <span class="partners-line"></span>
         </div>
@@ -184,14 +192,14 @@
         <div class="container">
             <div class="about-hero reveal">
                 <div class="about-hero-text">
-                    <div class="section-label">Who We Are</div>
-                    <h2 class="section-title">Investing in<br>Sustainable Value.</h2>
-                    <p class="about-lead">At Dabouq Group, we believe that true growth comes from integration — connecting industrial capabilities with nutritional security and advanced mobility.</p>
+                    <div class="section-label" data-i18n="about.label">Who We Are</div>
+                    <h2 class="section-title" data-i18n="about.title" data-i18n-html="true">Investing in<br>Sustainable Value.</h2>
+                    <p class="about-lead" data-i18n="about.lead">At Dabouq Group, we believe that true growth comes from integration — connecting industrial capabilities with nutritional security and advanced mobility.</p>
                 </div>
                 <div class="about-hero-panel reveal reveal-delay-1">
                     <span class="about-panel-num"><span class="counter" data-target="10">0</span>+</span>
-                    <span class="about-panel-label">Years of Excellence</span>
-                    <p>Building a resilient ecosystem across the Middle East.</p>
+                    <span class="about-panel-label" data-i18n="about.years">Years of Excellence</span>
+                    <p data-i18n="about.panel">Building a resilient ecosystem across the Middle East.</p>
                 </div>
             </div>
 
@@ -199,15 +207,15 @@
                 <article class="about-card about-card--featured">
                     <span class="about-card-watermark">01</span>
                     <div class="about-card-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Integrated Holding</h3>
-                    <p>Three strategic sectors — engineering, automotive, and FMCG — working as one unified ecosystem.</p>
+                    <h3 data-i18n="about.c1.title">Integrated Holding</h3>
+                    <p data-i18n="about.c1.desc">Three strategic sectors — engineering, automotive, and FMCG — working as one unified ecosystem.</p>
                 </article>
 
                 <article class="about-card">
                     <span class="about-card-watermark">02</span>
                     <div class="about-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>Regional Reach</h3>
-                    <p>Operations across Saudi Arabia, Jordan, UAE, and Egypt.</p>
+                    <h3 data-i18n="about.c2.title">Regional Reach</h3>
+                    <p data-i18n="about.c2.desc">Operations across Saudi Arabia, Jordan, UAE, and Egypt.</p>
                     <div class="about-card-tags">
                         <span>SA</span><span>JO</span><span>AE</span><span>EG</span>
                     </div>
@@ -216,30 +224,30 @@
                 <article class="about-card">
                     <span class="about-card-watermark">03</span>
                     <div class="about-card-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Long-Term Vision</h3>
-                    <p>Every investment designed to create sustainable, lasting value for generations.</p>
+                    <h3 data-i18n="about.c3.title">Long-Term Vision</h3>
+                    <p data-i18n="about.c3.desc">Every investment designed to create sustainable, lasting value for generations.</p>
                 </article>
 
                 <article class="about-card about-card--values">
                     <div class="about-value">
                         <div class="about-value-icon"><i class="fas fa-eye"></i></div>
                         <div>
-                            <strong>Visionary</strong>
-                            <span>Anticipating market shifts before they happen</span>
+                            <strong data-i18n="about.v1">Visionary</strong>
+                            <span data-i18n="about.v1.desc">Anticipating market shifts before they happen</span>
                         </div>
                     </div>
                     <div class="about-value">
                         <div class="about-value-icon"><i class="fas fa-chess-knight"></i></div>
                         <div>
-                            <strong>Strategic</strong>
-                            <span>Every investment aligned with long-term value</span>
+                            <strong data-i18n="about.v2">Strategic</strong>
+                            <span data-i18n="about.v2.desc">Every investment aligned with long-term value</span>
                         </div>
                     </div>
                     <div class="about-value">
                         <div class="about-value-icon"><i class="fas fa-globe"></i></div>
                         <div>
-                            <strong>Global</strong>
-                            <span>Operating across borders with local expertise</span>
+                            <strong data-i18n="about.v3">Global</strong>
+                            <span data-i18n="about.v3.desc">Operating across borders with local expertise</span>
                         </div>
                     </div>
                 </article>
@@ -251,13 +259,13 @@
         <div class="footer-cta reveal">
             <div class="container footer-cta-inner">
                 <div class="footer-cta-text">
-                    <h2>Ready to build the future?</h2>
-                    <p>Partner with a holding group that integrates industry, nutrition, and mobility.</p>
+                    <h2 data-i18n="footer.cta.title">Ready to build the future?</h2>
+                    <p data-i18n="footer.cta.desc">Partner with a holding group that integrates industry, nutrition, and mobility.</p>
                 </div>
-                <a href="/contact/" class="btn-primary">Start a Conversation</a>
+                <a href="/contact/" class="btn-primary" data-i18n="footer.cta.btn">Start a Conversation</a>
             </div>
         </div>
-        <div class="footer-map" aria-label="Regional presence map">
+        <div class="footer-map" data-i18n-aria="footer.map" aria-label="Regional presence map">
             <div id="regional-map"></div>
             <div class="footer-map-fade" aria-hidden="true"></div>
         </div>
@@ -265,35 +273,35 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="/assets/logo-white.png" alt="Dabouq Group" class="footer-logo">
-                    <p>A premier investment holding company with regional operations across the Middle East.</p>
+                    <p data-i18n="footer.brand">A premier investment holding company with regional operations across the Middle East.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
+                    <h4 data-i18n="footer.nav">Navigation</h4>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="/sectors/">Sectors</a></li>
-                        <li><a href="/careers/">Careers</a></li>
-                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="/sectors/" data-i18n="nav.sectors">Sectors</a></li>
+                        <li><a href="/careers/" data-i18n="nav.careers">Careers</a></li>
+                        <li><a href="/contact/" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Sectors</h4>
+                    <h4 data-i18n="footer.sectors">Sectors</h4>
                     <ul>
-                        <li><a href="/sectors/#engineering">ADAPTIV Engineering</a></li>
-                        <li><a href="/sectors/#automotive">Automotive</a></li>
-                        <li><a href="/sectors/#fmcg">FMCG</a></li>
+                        <li><a href="/sectors/#engineering" data-i18n="footer.sector1">ADAPTIV Engineering</a></li>
+                        <li><a href="/sectors/#automotive" data-i18n="footer.sector2">Automotive</a></li>
+                        <li><a href="/sectors/#fmcg" data-i18n="footer.sector3">FMCG</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.contact">Contact</h4>
                     <ul>
                         <li><a href="mailto:info@dabouq.com.sa">info@dabouq.com.sa</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Dabouq Group. All Rights Reserved.</p>
+                <p data-i18n="footer.copy">&copy; 2026 Dabouq Group. All Rights Reserved.</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/company/dabouq-trading-company/posts/?feedView=all" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.instagram.com/dabouq_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -329,6 +337,7 @@
       ]
     }
     </script>
+    <script src="/js/i18n.js"></script>
     <script src="/js/main.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="/js/map.js"></script>
