@@ -343,7 +343,7 @@
   }
 
   function t(lang, key) {
-    return (dict[lang] && dict[lang][key]) || (dict.en && dict.en[key]) || key;
+    return (dict[lang] && dict[lang][key]) || (dict.en && dict.en[key]) || '';
   }
 
   function pageMetaKey() {
@@ -366,6 +366,7 @@
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const key = el.getAttribute('data-i18n');
       const value = t(lang, key);
+      if (!value) return;
       if (el.dataset.i18nHtml === 'true') {
         el.innerHTML = value;
       } else {
@@ -374,11 +375,15 @@
     });
 
     document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
-      el.placeholder = t(lang, el.getAttribute('data-i18n-placeholder'));
+      const value = t(lang, el.getAttribute('data-i18n-placeholder'));
+      if (!value) return;
+      el.placeholder = value;
     });
 
     document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
-      el.setAttribute('aria-label', t(lang, el.getAttribute('data-i18n-aria')));
+      const value = t(lang, el.getAttribute('data-i18n-aria'));
+      if (!value) return;
+      el.setAttribute('aria-label', value);
     });
 
     const title = t(lang, pageMetaKey());
