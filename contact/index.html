@@ -21,23 +21,23 @@
 
     <header class="site-header scrolled" id="header">
         <nav class="nav-container">
-            <a href="/"><img src="/assets/logo.png" alt="Dabouq Group" class="logo-img logo-dark"><img src="/assets/logo-white.png" alt="" class="logo-img logo-light" aria-hidden="true"></a>
+            <a href="/" class="nav-brand"><img src="/assets/logo.png" alt="Dabouq Group" class="logo-img logo-dark"><img src="/assets/logo-white.png" alt="" class="logo-img logo-light" aria-hidden="true"></a>
             <ul class="nav-links">
                 <li><a href="/" data-i18n="nav.home">Home</a></li>
                 <li><a href="/#about" data-i18n="nav.about">About</a></li>
                 <li><a href="/sectors/" data-i18n="nav.sectors">Sectors</a></li>
                 <li><a href="/careers/" data-i18n="nav.careers">Careers</a></li>
-                <li><a href="/contact/" class="btn-nav btn-nav-desktop active" data-i18n="nav.cta">Get in Touch</a></li>
-                <li class="lang-switch-desktop">
-                    <div class="lang-switch" role="group" aria-label="Language">
-                        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
-                        <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
-                    </div>
-                </li>
             </ul>
-            <button class="menu-toggle" data-i18n-aria="nav.menu" aria-label="Open menu">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
+            <div class="nav-actions">
+                <a href="/contact/" class="btn-nav btn-nav-desktop active" data-i18n="nav.cta">Get in Touch</a>
+                <div class="lang-switch lang-switch-desktop" role="group" aria-label="Language">
+                    <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                    <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
+                </div>
+                <button class="menu-toggle" data-i18n-aria="nav.menu" aria-label="Open menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
         </nav>
     </header>
 
